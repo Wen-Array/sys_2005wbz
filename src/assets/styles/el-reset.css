@@ -1,0 +1,25 @@
+.home .el-carousel.el-carousel--horizontal.el-carousel--card {
+    width: 300px;
+}
+
+body {
+    position: relative;
+}
+
+#app {
+    background-image: url(./img/空间.jpg);
+    background-size: 100% 100%;
+}
+
+.Login-Page {
+    position: absolute;
+    right: 150px;
+    bottom: 250px;
+}
+
+
+/* 登录页表单输入样式 */
+
+.Login-Page .el-input__inner {
+    width: 83% !important;
+}
