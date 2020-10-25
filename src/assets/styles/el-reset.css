@@ -15,6 +15,7 @@ body {
     position: absolute;
     right: 150px;
     bottom: 250px;
+    background: rgb(10, 10, 10, 0.2);
 }
 
 
@@ -22,4 +23,8 @@ body {
 
 .Login-Page .el-input__inner {
     width: 83% !important;
+}
+
+.Login-Page .el-form-item__label {
+    color: #ffffff;
 }

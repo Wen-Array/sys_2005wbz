@@ -2,11 +2,14 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+//引入全局css和element-rest
 import "@/assets/styles/base.css"
 import "@/assets/styles/el-reset.css"
-
+//引入element-ui
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+//引入iconfont
+import './assets/iconfont/iconfont.css'
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
@@ -34,6 +37,8 @@ router.beforeEach((to, from, next) => {
         }
     }
 })
+
+import "./utils/recursionRoutes.js"
 
 new Vue({
     router,

@@ -1,7 +1,7 @@
 <template>
   <div class="Login-Page">
     <legend>
-      登录
+      <h1>登录</h1>
       <hr />
       <el-form
         :model="loginForm"
@@ -49,7 +49,7 @@
 //校验不通过，跳到登录页面
 
 import { login } from "@/api";
-import{mapMutations} from "vuex";
+import { mapMutations } from "vuex";
 
 export default {
   data() {
@@ -85,7 +85,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['SET_USERINFO']),
+    ...mapMutations(["SET_USERINFO"]),
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
@@ -111,9 +111,12 @@ export default {
               if (res.data.state) {
                 //用户名密码正确
                 localStorage.setItem("wf-token", res.data.token);
-                localStorage.setItem("wf-userInfo", JSON.stringify(res.data.userInfo));
+                localStorage.setItem(
+                  "wf-userInfo",
+                  JSON.stringify(res.data.userInfo)
+                );
                 //更改vuex中的state['userinfo']的值
-                this.SET_USERINFO(res.data.userInfo)
+                this.SET_USERINFO(res.data.userInfo);
                 //跳转到主页
                 this.$router.push("/");
                 this.$message.success("登录成功");
@@ -142,4 +145,16 @@ export default {
 .el-form {
   width: 400px;
 }
+
+h1 {
+  color: #fff;
+}
+.el-form-item__label {
+  color: #fff;
+}
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 200px;
+  min-height: 400px;
+}
+
 </style>
